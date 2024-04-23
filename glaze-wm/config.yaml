@@ -112,13 +112,13 @@ binding_modes:
   - name: "resize"
     keybindings:
       # Resize focused window by a percentage or pixel amount.
-      - command: "resize width -2%"
+      - command: "resize width -5%"
         bindings: ["H", "Left"]
-      - command: "resize width +2%"
+      - command: "resize width +5%"
         bindings: ["L", "Right"]
-      - command: "resize height +2%"
+      - command: "resize height +5%"
         bindings: ["K", "Up"]
-      - command: "resize height -2%"
+      - command: "resize height -5%"
         bindings: ["J", "Down"]
       # Press enter/escape to return to default keybindings.
       - command: "binding mode none"
@@ -145,15 +145,6 @@ keybindings:
   - command: "move down"
     bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
 
-  # Resize focused window by a percentage or pixel amount.
-  #- command: "resize width -2%"
-  #  binding: "Alt+U"
-  #- command: "resize width +2%"
-  #  binding: "Alt+P"
-  #- command: "resize height +2%"
-  #  binding: "Alt+O"
-  #- command: "resize height -2%"
-  #  binding: "Alt+I"
 
   # As an Alternative to the resize keybindings above, resize mode enables resizing via
   # HJKL or arrow keys. The binding mode is defined above with the name "resize".
@@ -161,8 +152,11 @@ keybindings:
     binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
-  - command: "tiling direction toggle"
+  - command: "tiling direction vertical "
     binding: "Alt+V"
+
+  - command: "tiling direction horizontal  "
+    binding: "Alt+B"
 
   # Change focus between floating / tiling windows.
   - command: "focus mode toggle"
@@ -197,16 +191,6 @@ keybindings:
   - command: "exec %ProgramFiles%/Alacritty/alacritty.exe"
     binding: "Alt+Enter"
 
-  # Focus the workspace that last had focus.
-  #- command: "focus workspace recent"
-  #  binding: "Alt+Y"
-
-  # Focus the next/previous workspace defined in `workspaces` config.
-  #- command: "focus workspace next"
-    #binding: "Alt+T"
-  #- command: "focus workspace prev"
-#    binding: "Alt+Shift+T"
-
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace 1"
     binding: "Alt+1"
@@ -238,23 +222,23 @@ keybindings:
   #  binding: "Alt+S"
 
   # Move focused window to a workspace defined in `workspaces` config.
-  - commands: ["move to workspace 1", "focus workspace 1"]
+  - commands: ["move to workspace 1"]
     binding: "Alt+Shift+1"
-  - commands: ["move to workspace 2", "focus workspace 2"]
+  - commands: ["move to workspace 2"]
     binding: "Alt+Shift+2"
-  - commands: ["move to workspace 3", "focus workspace 3"]
+  - commands: ["move to workspace 3"]
     binding: "Alt+Shift+3"
-  - commands: ["move to workspace 4", "focus workspace 4"]
+  - commands: ["move to workspace 4"]
     binding: "Alt+Shift+4"
-  - commands: ["move to workspace 5", "focus workspace 5"]
+  - commands: ["move to workspace 5"]
     binding: "Alt+Shift+5"
-  - commands: ["move to workspace 6", "focus workspace 6"]
+  - commands: ["move to workspace 6"]
     binding: "Alt+Shift+6"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     binding: "Alt+Shift+7"
-  - commands: ["move to workspace 8", "focus workspace 8"]
+  - commands: ["move to workspace 8"]
     binding: "Alt+Shift+8"
-  - commands: ["move to workspace 9", "focus workspace 9"]
+  - commands: ["move to workspace 9"]
     bindings: ["Alt+Shift+9"]
 
   # exec software
